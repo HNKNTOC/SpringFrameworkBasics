@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="client" class="example.one.Client">
+        <constructor-arg index="0" value="01"/>
+        <constructor-arg index="1" value="Homer Simpson"/>
+    </bean>
+
+    <bean id="consoleEventLogger" class="example.one.ConsoleEventLogger"/>
+
+    <bean id="fileEventLogger" class="example.one.log.FileEventLogger" init-method="init">
+        <constructor-arg value="logEvent"/>
+    </bean>
+
+    <bean id="app" class="example.one.App">
+        <constructor-arg ref="client"/>
+        <constructor-arg ref="fileEventLogger"/>
+    </bean>
+
+    <bean id="event" class="example.one.log.Event" scope="prototype">
+        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="java.text.DateFormat" factory-method="getDateTimeInstance">
+                <constructor-arg value="2"/>
+                <constructor-arg value="2"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+</beans>
