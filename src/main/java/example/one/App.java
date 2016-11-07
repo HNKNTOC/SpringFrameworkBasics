@@ -3,6 +3,7 @@ package example.one;
 import example.one.log.Event;
 import example.one.log.EventLogger;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,7 +13,7 @@ public class App {
 
     private Client client = null;
     private EventLogger consoleEventLogger = null;
-    private static ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+    private static ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
     public App(Client client, EventLogger consoleEventLogger) {
         this.client = client;
@@ -35,6 +36,9 @@ public class App {
         App app = context.getBean("app",App.class);
 
         Client client = app.getClient();
-        app.logEvent(String.format("User \"#%d\" connect to server.", client.getId()));
+        for (int i = 0; i < 9; i++) {
+            app.logEvent(String.format("User \"#%d\" connect to server.", client.getId()));
+        }
+        context.close();
     }
 }

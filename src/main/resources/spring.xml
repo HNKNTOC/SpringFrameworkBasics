@@ -15,6 +15,11 @@
         <constructor-arg value="logEvent"/>
     </bean>
 
+    <bean id="cacheFileEventLogger" class="example.one.log.CacheFileEventLogger" init-method="init" destroy-method="destroy">
+        <constructor-arg value="logEvent"/>
+        <constructor-arg value="5"/>
+    </bean>
+
     <bean id="app" class="example.one.App">
         <constructor-arg ref="client"/>
         <constructor-arg ref="fileEventLogger"/>

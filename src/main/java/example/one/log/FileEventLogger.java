@@ -15,10 +15,10 @@ public class FileEventLogger implements EventLogger {
 
     public FileEventLogger(String fileName) {
         this.fileName = fileName;
+        this.file = new File(fileName);
     }
 
     public void init() throws IOException {
-        this.file = new File(fileName);
         if (!file.canWrite()) {
             throw new IOException("Can not write to file "+file.getAbsolutePath());
         }
