@@ -1,12 +1,17 @@
 package example.one.log;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Created by Nikita on 07.11.2016.
  */
 public class CacheFileEventLogger extends FileEventLogger {
+    private static final Logger LOGGER = LogManager.getLogger(CacheFileEventLogger.class);
 
     private int cacheSize;
     private List<Event> cache;
@@ -33,6 +38,7 @@ public class CacheFileEventLogger extends FileEventLogger {
     }
 
     public void destroy(){
+        LOGGER.debug("destroy");
         if (!cache.isEmpty()) {
             writeEventsFromCache();
         }

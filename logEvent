@@ -1,10 +1,9 @@
-
-Event{id=1, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:09}
-Event{id=2, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:10}
-Event{id=3, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:12}
-Event{id=4, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:30}
-Event{id=5, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:30}
-Event{id=6, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:30}
-Event{id=7, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:30}
-Event{id=8, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:30}
-Event{id=9, msg='User "Homer Simpson" connect to server.', date=07.11.2016 4:29:30}
+Event{id=1, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=2, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=3, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=4, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=5, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=6, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=7, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=8, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+Event{id=9, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
