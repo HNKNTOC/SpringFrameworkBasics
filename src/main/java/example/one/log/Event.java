@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class Event {
     private static int idNumber = 0;
+    private EventType eventType;
     private int id;
     private String msg;
     private Date date;
@@ -18,6 +19,10 @@ public class Event {
         this.date = date;
         idNumber++;
         this.id = idNumber;
+    }
+
+    public void setEventType(EventType eventType) {
+        this.eventType = eventType;
     }
 
     public String getMsg() {
@@ -31,9 +36,11 @@ public class Event {
     @Override
     public String toString() {
         return "Event{" +
-                "id=" + id +
+                "eventType=" + eventType +
+                ", id=" + id +
                 ", msg='" + msg + '\'' +
-                ", date=" + dateFormat.format(date) +
+                ", date=" + date +
+                ", dateFormat=" + dateFormat +
                 '}';
     }
 }

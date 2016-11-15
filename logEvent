@@ -1,9 +1,10 @@
-Event{id=1, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=2, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=3, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=4, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=5, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=6, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=7, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=8, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
-Event{id=9, msg='User "Homer Simpson" connect to server.', date=11.11.2016 2:25:02}
+
+Event{eventType=ERROR, id=1, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=3, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=5, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=7, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=9, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=11, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=13, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=15, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
+Event{eventType=ERROR, id=17, msg='User "Homer Simpson" connect to server.', date=Tue Nov 15 02:59:05 GMT+03:00 2016, dateFormat=java.text.SimpleDateFormat@79fd1708}
