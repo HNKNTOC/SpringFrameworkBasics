@@ -5,5 +5,6 @@ package example.one.log;
  */
 public enum EventType {
     INFO,
+    DEBUG,
     ERROR;
 }

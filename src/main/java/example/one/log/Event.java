@@ -1,6 +1,7 @@
 package example.one.log;
 
 import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -31,6 +32,11 @@ public class Event {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public static boolean isDay(){
+        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        return (hour<=12);
     }
 
     @Override

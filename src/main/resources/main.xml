@@ -31,6 +31,7 @@
     <bean id="app" class="example.one.App" c:client-ref="client" c:defaultLogger-ref="consoleLogger">
         <constructor-arg>
             <map>
+                <entry key="DEBUG" value-ref="#{T(example.one.log.Event).isDay() ? 'consoleLogger' : 'fileLogger'}"/>
                 <entry key="INFO" value-ref="consoleLogger"/>
                 <entry key="ERROR" value-ref="combinedLogger"/>
             </map>

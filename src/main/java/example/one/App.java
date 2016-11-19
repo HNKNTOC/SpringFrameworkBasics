@@ -32,6 +32,7 @@ public class App {
         for (int i = 0; i < 9; i++) {
             app.logEvent(EventType.ERROR,String.format("User \"#%d\" connect to server.", client.getId()));
             app.logEvent(EventType.INFO,String.format("User \"#%d\" connect to server.", client.getId()));
+            app.logEvent(EventType.DEBUG,String.format("User \"#%d\" connect to server.", client.getId()));
         }
         context.close();
     }
