@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <!--Это пример-->
+
+    <import resource="loggers.xml"/>
+
+    <util:properties id="clientProperties"
+                     location="classpath:client.properties"/>
+
+    <util:map id="loggerMap">
+        <entry key="INFO" value-ref="consoleLogger"/>
+        <entry key="ERROR" value-ref="combinedLogger"/>
+    </util:map>
+
+
+</beans>
