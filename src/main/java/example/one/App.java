@@ -3,27 +3,46 @@ package example.one;
 import example.one.log.Event;
 import example.one.log.EventLogger;
 import example.one.log.EventType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by Nikita on 04.11.2016.
  */
+@Component
 public class App {
 
+    private static final Logger LOGGER = LogManager.getLogger(App.class);
     private static ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("main.xml");
-    private final Map<EventType, EventLogger> loggerMap;
+    private Map<EventType, EventLogger> loggerMap;
     private Client client;
     private EventLogger defaultLogger;
 
-    public App(Client client, EventLogger defaultLogger, Map<EventType, EventLogger> loggerMap) {
-        this.client = client;
-        this.defaultLogger = defaultLogger;
+
+    public static App createInstance(){
+        return new App();
+    }
+
+    public void setLoggerMap(Map<EventType, EventLogger> loggerMap) {
         this.loggerMap = loggerMap;
     }
 
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void setDefaultLogger(EventLogger defaultLogger) {
+        this.defaultLogger = defaultLogger;
+    }
+
+    @Autowired
     public static void main(String[] args) {
 
         App app = context.getBean("app", App.class);

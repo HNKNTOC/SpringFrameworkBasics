@@ -14,6 +14,7 @@
 
 
     <import resource="loggers.xml"/>
+    <import resource="aspects.xml"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -28,14 +29,17 @@
     <bean id="client" class="example.one.Client"
           c:id="${id}" c:fullName="${name}" p:greeting="${greeting}"/>
 
-    <bean id="app" class="example.one.App" c:client-ref="client" c:defaultLogger-ref="consoleLogger">
-        <constructor-arg>
+    <bean id="app" class="example.one.App" factory-method="createInstance"
+          p:client-ref="client" p:defaultLogger-ref="consoleLogger">
+        <property name="loggerMap">
             <map>
                 <entry key="DEBUG" value-ref="#{T(example.one.log.Event).isDay() ? 'consoleLogger' : 'fileLogger'}"/>
                 <entry key="INFO" value-ref="consoleLogger"/>
                 <entry key="ERROR" value-ref="combinedLogger"/>
             </map>
-        </constructor-arg>
+        </property>
     </bean>
+
+
 
 </beans>

@@ -2,15 +2,20 @@
 <!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
 <log4j:configuration>
 
-    <appender name="example.one" class="org.apache.log4j.ConsoleAppender">
+    <appender name="Console" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d{dd.MM.yyyy HH:mm:ss.SSS} [%-5p][%-6.6t][%-20.20c{1}] - %m %n" />
         </layout>
     </appender>
 
+    <logger name="example.one">
+        <level value="DEBUG"/>
+        <appender-ref ref="Console"/>
+    </logger>
+
     <root>
-        <priority value="WARN"/>
-        <appender-ref ref="example.one" />
+        <level value="WARN"/>
+        <appender-ref ref="Console"/>
     </root>
 
 </log4j:configuration>
