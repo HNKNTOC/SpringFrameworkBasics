@@ -15,6 +15,7 @@
 
     <import resource="loggers.xml"/>
     <import resource="aspects.xml"/>
+    <import resource="base.xml"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">

@@ -26,6 +26,14 @@ public class Event {
         this.eventType = eventType;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public EventType getEventType() {
+        return eventType;
+    }
+
     public String getMsg() {
         return msg;
     }
