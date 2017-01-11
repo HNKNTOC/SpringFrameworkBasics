@@ -65,7 +65,7 @@ public class App {
         defaultLogger = selectLogger(type);
         Event event = createEvent(processingMsg(msg), type);
         defaultLogger.logEvent(event);
-        logInDataBase(event, jdbcTemplate);
+        //logInDataBase(event, jdbcTemplate);
     }
 
     private String processingMsg(String msg) {
